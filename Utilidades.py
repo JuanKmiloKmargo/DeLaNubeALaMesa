@@ -3,6 +3,7 @@ Created on Tue Oct 10 12:05:57 2023
 
 @author: USUARIO
 """
+
 from PIL import ImageTk, Image
 import PIL.Image
 from tkinter import *
@@ -21,3 +22,11 @@ def Centrar_la_Ventana(ventana,ancho_aplicacion,largo_aplicacion):
 def AbrirArchivo(Titulo:str):
     archivo = filedialog.askopenfilename(title=Titulo , initialdir="C:/")
     return archivo
+
+def GetKey(diccionario, valor):
+    for clave, val in diccionario.items():
+        if val == valor:
+            return clave
+    return None  # Si el valor no se encuentra en el diccionario
+
+
